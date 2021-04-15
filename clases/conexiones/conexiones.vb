@@ -5,7 +5,7 @@ Imports System.Configuration
 Public Class conexiones
     Protected conn As New SqlConnection
 
-    Event Err(descripcion As String)
+    Event ConexionesError(descripcion As String)
 
     Public Function fConectar(Optional CadenaConexion = Nothing)
         Dim Cadena As String
@@ -21,7 +21,7 @@ Public Class conexiones
             conn.Open()
             Return True
         Catch ex As Exception
-            RaiseEvent Err(ex.Message)
+            RaiseEvent ConexionesError(ex.Message)
             Return False
         End Try
     End Function
@@ -37,7 +37,7 @@ Public Class conexiones
                 Return False
             End If
         Catch ex As Exception
-            RaiseEvent Err(ex.Message)
+            RaiseEvent ConexionesError(ex.Message)
             Return False
         End Try
 
