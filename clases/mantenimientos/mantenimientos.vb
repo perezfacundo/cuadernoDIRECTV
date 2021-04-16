@@ -4,8 +4,8 @@ Public Class mantenimientos
     Inherits conexiones
     Event MantenimientosError(descripcion As String)
 
-    Public Function vercodigo() As DataTable
-        Dim query As String = "select * from clientes"
+    Public Function fBuscar(nombre As String) As DataTable
+        Dim query As String = "SELECT * FROM clientes WHERE cliente='" & nombre & "'"
 
         Try
             fConectar()

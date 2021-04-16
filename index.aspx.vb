@@ -8,9 +8,12 @@ Public Class index
 
     End Sub
 
-    Private Sub mostrar_Click(sender As Object, e As EventArgs) Handles mostrar.Click
+    Private Sub cmdMostrar_Click(sender As Object, e As EventArgs) Handles cmdMostrar.Click
+        Dim nombre As String = txtNombre.Text
+        nombre.Trim.ToUpper()
+
         Dim tabla As New DataTable
-        tabla = objMantenimientos.vercodigo()
+        tabla = objMantenimientos.fBuscar(nombre)
 
         detalle.DataSource = tabla
         detalle.DataBind()
