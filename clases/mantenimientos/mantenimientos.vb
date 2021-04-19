@@ -29,15 +29,41 @@ Public Class mantenimientos
 
     End Function
 
-    Public Function fActualizar()
+    Public Function fModificar(DNI As Long)
 
+        query = "SELECT * FROM clientes WHERE dni=" & DNI
 
+        Dim cadenaResultado As String = ""
+
+        Try
+            fConectar()
+            Dim cmd As New SqlCommand(query, conn)
+            Dim registro As SqlDataReader = cmd.ExecuteReader
+            Return registro
+        Catch ex As Exception
+            RaiseEvent MantenimientosError(ex.Message)
+            Return "Ha ocurrido un error. Por favor intente de nuevo"
+        Finally
+            fDesconectar()
+        End Try
 
     End Function
 
-    Public Function fEliminar()
+    Public Function fEliminar(DNI As Long)
 
+        query = "DELETE FROM clientes WHERE dni=" & DNI
 
+        Try
+            fConectar()
+            Dim cmd As New SqlCommand(query, conn)
+            Dim cant As Integer = cmd.ExecuteNonQuery()
+            Return "El cliente ha sido borrado"
+        Catch ex As Exception
+            RaiseEvent MantenimientosError(ex.Message)
+            Return "No existe un cliente para el DNI ingresado"
+        Finally
+            fDesconectar()
+        End Try
 
     End Function
 
@@ -49,9 +75,9 @@ Public Class mantenimientos
             fConectar()
             Dim cmd As New SqlCommand(query, conn)
             cmd.CommandType = CommandType.Text
-            Dim resultado As SqlDataReader = cmd.ExecuteReader()
+            Dim registro As SqlDataReader = cmd.ExecuteReader()
             Dim tabla As DataTable = New DataTable()
-            tabla.Load(resultado)
+            tabla.Load(registro)
             Return tabla
         Catch ex As Exception
             RaiseEvent MantenimientosError(ex.Message)

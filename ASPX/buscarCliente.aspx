@@ -1,11 +1,11 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="index.aspx.vb" Inherits="cuadernoDIRECTV.index" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="buscarCliente.aspx.vb" Inherits="cuadernoDIRECTV.index" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>CLIENTES DIRECTV</title>
+    <title>Buscar cliente</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
     
@@ -37,15 +37,11 @@
 
             <table style="margin:0px 20px, 20px, 0px">
                 <tr>
-                    <td class="auto-style5"><asp:HyperLink ID="HyperLink1" runat="server" href="#">Agregar cliente</asp:HyperLink></td>
-                    <td class="auto-style6"><asp:HyperLink ID="HyperLink3" runat="server" href="#">Eliminar cliente</asp:HyperLink></td>
-                    <td><asp:HyperLink ID="HyperLink2" runat="server" href="#">Modificar cliente</asp:HyperLink></td>
+                    <td class="auto-style5"><asp:HyperLink ID="HyperLink1" runat="server" href="agregarCliente.aspx">Agregar cliente</asp:HyperLink></td>
+                    <td class="auto-style6"><asp:HyperLink ID="HyperLink3" runat="server" href="eliminarCliente.aspx">Eliminar cliente</asp:HyperLink></td>
+                    <td><asp:HyperLink ID="HyperLink2" runat="server" href="modificarCliente.aspx">Modificar cliente</asp:HyperLink></td>
                 </tr>
             </table>
-        </div>
-
-        <div class="hyperlinks">
-            
         </div>
 
         <div class="mensaje">
@@ -53,7 +49,7 @@
         </div>
 
         <div class="grilla">
-            <asp:GridView ID="detalle" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" >
+            <asp:GridView ID="detalle" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="739px" >
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

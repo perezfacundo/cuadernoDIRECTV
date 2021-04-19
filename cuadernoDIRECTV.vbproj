@@ -112,11 +112,43 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ASPX\agregarCliente.aspx" />
+    <Content Include="ASPX\eliminarCliente.aspx" />
+    <Content Include="ASPX\listarClientes.aspx" />
+    <Content Include="ASPX\modificarCliente.aspx" />
     <Content Include="CSS\estilos.css" />
-    <Content Include="ASPX\index.aspx" />
+    <Content Include="ASPX\buscarCliente.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPX\agregarCliente.aspx.designer.vb">
+      <DependentUpon>agregarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\agregarCliente.aspx.vb">
+      <DependentUpon>agregarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\eliminarCliente.aspx.designer.vb">
+      <DependentUpon>eliminarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\eliminarCliente.aspx.vb">
+      <DependentUpon>eliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\listarClientes.aspx.designer.vb">
+      <DependentUpon>listarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\listarClientes.aspx.vb">
+      <DependentUpon>listarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\modificarCliente.aspx.designer.vb">
+      <DependentUpon>modificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\modificarCliente.aspx.vb">
+      <DependentUpon>modificarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="clases\conexiones\conexiones.vb" />
     <Compile Include="clases\mantenimientos\mantenimientos.vb" />
     <Compile Include="DataSet1.Designer.vb">
@@ -124,11 +156,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ASPX\index.aspx.designer.vb">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="ASPX\buscarCliente.aspx.designer.vb">
+      <DependentUpon>buscarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX\index.aspx.vb">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="ASPX\buscarCliente.aspx.vb">
+      <DependentUpon>buscarCliente.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
