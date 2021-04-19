@@ -32,22 +32,58 @@ Partial Public Class index
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtNombre.
+    '''Control txtDNI.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control cmdMostrar.
+    '''Control cmdBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cmdMostrar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents cmdBuscar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control HyperLink1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control HyperLink3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HyperLink3 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control HyperLink2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''Control lblMensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control detalle.

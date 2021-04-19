@@ -1,0 +1,31 @@
+﻿.cajasTexto, .botones, .hyperlinks, .mensaje, .grilla{
+    margin:20px
+}
+
+.auto-style1 {
+    width: 198px;
+}
+
+.auto-style2 {
+    width: 48%;
+}
+
+.auto-style3 {
+    width: 89px;
+}
+
+.auto-style4 {
+    width: 235px;
+}
+
+.auto-style5 {
+    width: 115px;
+}
+
+.auto-style6 {
+    width: 118px;
+}
+
+.auto-style7 {
+    width: 35%
+}

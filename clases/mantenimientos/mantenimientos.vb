@@ -4,8 +4,46 @@ Public Class mantenimientos
     Inherits conexiones
     Event MantenimientosError(descripcion As String)
 
-    Public Function fBuscar(nombre As String) As DataTable
-        Dim query As String = "SELECT * FROM clientes WHERE cliente='" & nombre & "'"
+    Dim query As String
+
+    Public Function fAgregar(DNI As Long, cliente As String, codigo As Long, telefono As Long, debe As String)
+
+        query = "INSERT INTO clientes(dni,cliente,codigo,telefono,debe) VALUES (" &
+            DNI & ",'" &
+            cliente & "'," &
+            codigo & "," &
+            telefono & "," &
+            debe & ")"
+
+        Try
+            fConectar()
+            Dim cmd As New SqlCommand(query, conn)
+            cmd.ExecuteNonQuery()
+            Return "El registro fue insertado exitosamente"
+        Catch ex As Exception
+            RaiseEvent MantenimientosError(ex.Message)
+            Return "Ocurrio un error al intentar insertar el registro"
+        Finally
+            fDesconectar()
+        End Try
+
+    End Function
+
+    Public Function fActualizar()
+
+
+
+    End Function
+
+    Public Function fEliminar()
+
+
+
+    End Function
+
+    Public Function fBuscar(DNI As Long) As DataTable
+
+        query = "SELECT * FROM clientes WHERE DNI=" & DNI
 
         Try
             fConectar()
@@ -23,4 +61,5 @@ Public Class mantenimientos
         End Try
 
     End Function
+
 End Class
