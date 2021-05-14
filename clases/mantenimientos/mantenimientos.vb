@@ -88,4 +88,22 @@ Public Class mantenimientos
 
     End Function
 
+    Public Function fTraer(DNI As Long) As SqlDataReader
+
+        query = "SELECT * FROM clientes WHERE dni=" & DNI
+
+        Try
+            fConectar()
+            Dim cmd As New SqlCommand(query, conn)
+            Dim registro As SqlDataReader = cmd.ExecuteReader()
+            Return registro
+        Catch ex As Exception
+            RaiseEvent MantenimientosError(ex.Message)
+            Return Nothing
+        Finally
+            fDesconectar()
+        End Try
+
+    End Function
+
 End Class

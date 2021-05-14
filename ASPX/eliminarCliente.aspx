@@ -36,8 +36,8 @@
             <table style="margin:0px 20px, 20px, 0px">
                 <tr>
                     <td class="auto-style5"><asp:HyperLink ID="HyperLink1" runat="server" href="agregarCliente.aspx">Agregar cliente</asp:HyperLink></td>
-                    <td class="auto-style6"><asp:HyperLink ID="HyperLink3" runat="server" href="eliminarCliente.aspx">Eliminar cliente</asp:HyperLink></td>
                     <td><asp:HyperLink ID="HyperLink2" runat="server" href="modificarCliente.aspx">Modificar cliente</asp:HyperLink></td>
+                    <td class="auto-style6"><asp:HyperLink ID="HyperLink3" runat="server" href="buscarCliente.aspx">Volver al inicio</asp:HyperLink></td>
                 </tr>
             </table>
         </div>
